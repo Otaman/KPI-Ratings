@@ -276,18 +276,45 @@
         </Grid.ColumnDefinitions>
         
         <StackPanel Grid.Column="1" VerticalAlignment="Center">
-            <toolkit:PhoneTextBox Hint="Логін" BorderBrush="Transparent" SelectionBackground="#FFA20F01" Style="{StaticResource LoginTextBoxStyle}" Background="#11670C15"/>
+            <toolkit:PhoneTextBox 
+                x:Name="LoginBox" 
+                Hint="Логін" 
+                BorderBrush="Transparent" 
+                SelectionBackground="#FFA20F01" 
+                Style="{StaticResource LoginTextBoxStyle}" 
+                Background="#11670C15"
+                Text="123"
+            />
             <Grid>
-                <TextBox x:Name="PasswordWatermark" TextWrapping="Wrap" Text="Пароль" 
-                         Foreground="{StaticResource PhoneTextBoxReadOnlyBrush}"
-                         Background="#11670C15"
-                         IsHitTestVisible="False" BorderBrush="#FF670C15" BorderThickness="0"/>
-                <PasswordBox Name="PwdBox" LostFocus="PasswordBox_LostFocus" 
-                             Opacity="0" GotFocus="PasswordBox_GotFocus" 
-                             BorderThickness="0" FontFamily="Segoe UI" BorderBrush="#FF670C15" 
-                             Background="#11670C15" SelectionBackground="Black" Style="{StaticResource LoginPasswordBoxStyle}"/>
+                <TextBox 
+                    x:Name="PasswordWatermark" 
+                    TextWrapping="Wrap" 
+                    Text="Пароль" 
+                    Foreground="{StaticResource PhoneTextBoxReadOnlyBrush}"
+                    Background="#11670C15"
+                    IsHitTestVisible="False" 
+                    BorderBrush="#FF670C15" 
+                    BorderThickness="0"
+                />
+                <PasswordBox 
+                    Name="PwdBox" 
+                    LostFocus="PasswordBox_LostFocus" 
+                    Opacity="0" 
+                    GotFocus="PasswordBox_GotFocus" 
+                    BorderThickness="0" 
+                    FontFamily="Segoe UI" 
+                    BorderBrush="#FF670C15" 
+                    Background="#11670C15" 
+                    SelectionBackground="Black" 
+                    Style="{StaticResource LoginPasswordBoxStyle}"
+                    Password="123"
+                />
             </Grid>
-            <Button BorderBrush="#FF670C15" Foreground="#FF670C15" Style="{StaticResource LoginButtonStyle}">Увійти</Button>
+            <Button 
+                BorderBrush="#FF670C15" 
+                Foreground="#FF670C15" 
+                Style="{StaticResource LoginButtonStyle}"
+                Click="ButtonLogin_Click">Увійти</Button>
         </StackPanel>
     </Grid>
 

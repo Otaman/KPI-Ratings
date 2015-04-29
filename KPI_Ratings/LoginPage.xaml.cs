@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using KPI_Ratings.API;
 
 namespace KPI_Ratings
 {
@@ -52,6 +53,11 @@ namespace KPI_Ratings
             {
                 PwdBox.SelectAll();
             }
+        }
+
+        private void ButtonLogin_Click(object sender, RoutedEventArgs e)
+        {
+            Login.Auth(LoginBox.Text, PwdBox.Password);
         }
     }
 }
